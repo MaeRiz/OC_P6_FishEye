@@ -37,14 +37,46 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 5px solid #ffffff00;
+    border-radius: 15px;
+    padding: 10px;
+    width: 450px;
 }
+
+.photographer_section article:hover, article:focus {
+    border: 5px solid #901C1C;
+} 
 
 .photographer_section article h2 {
     color: #D3573C;
     font-size: 36px;
+    margin-bottom: 0;
 }
 
 .photographer_section article img {
     height: 200px;
     width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.photographer_section article p {
+    margin: 0;
+}
+
+.photographer_section article .price {
+    color: #757575;
+}
+
+.photographer_section article .location {
+    color: #901C1C;
+    font-size: 20px;
+}
+.photographer_section article .tagline {
+    color: black;
+}
+
+
+.photographer_section a {
+    text-decoration: none;
 }
