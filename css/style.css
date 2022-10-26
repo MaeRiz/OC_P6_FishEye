@@ -3,6 +3,7 @@
 body {
     font-family: "DM Sans", sans-serif;
     margin: 0;
+    padding: 10px;
 }
 
 
@@ -40,7 +41,7 @@ h1 {
     border: 5px solid #ffffff00;
     border-radius: 15px;
     padding: 10px;
-    width: 450px;
+    width: 400px;
 }
 
 .photographer_section article:hover, article:focus {
