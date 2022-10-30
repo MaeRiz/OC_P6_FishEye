@@ -15,6 +15,7 @@ function mediaFactory(data_media, data_photographer) {
             source.setAttribute("type", "video/mp4");
             video_media.appendChild(source);
             video_media.setAttribute("onclick", `displayLightBox(), currentSlide(${current})`);
+            video_media.setAttribute("tabindex", "0");
             article.appendChild(video_media);
         } else {
             picture = `assets/images/${data_photographer.name}/${image}`;
@@ -22,6 +23,8 @@ function mediaFactory(data_media, data_photographer) {
             img.setAttribute("src", picture);
             img.setAttribute("alt", title);
             img.setAttribute("onclick", `displayLightBox(), currentSlide(${current})`);
+            img.setAttribute("onpress", `displayLightBox(), currentSlide(${current})`);
+            img.setAttribute("tabindex", "0");
             article.appendChild(img);
         }
 

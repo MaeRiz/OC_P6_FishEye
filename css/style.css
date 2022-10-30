@@ -44,7 +44,8 @@ h1 {
     width: 400px;
 }
 
-.photographer_section article:hover, article:focus {
+.photographer_section article:hover,
+.photographer_section article:focus {
     border: 5px solid #901C1C;
 } 
 

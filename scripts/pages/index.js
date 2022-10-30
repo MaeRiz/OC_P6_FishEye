@@ -14,6 +14,7 @@
 
             const link = document.createElement( 'a' );
             link.setAttribute("href", "/photographer.html?id=" + photographer.id);
+            link.setAttribute("tabindex", "-1");
 
             const photographerModel = photographerFactory(photographer);
             const userCardDOM = photographerModel.getUserCardDOM();

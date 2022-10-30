@@ -9,20 +9,20 @@
   </head>
   <body>
     <header>
-      <a href="index.html"><img src="assets/images/logo.png" class="logo" /></a>
+      <a href="index.html" tabindex="-1"><img src="assets/images/logo.png" class="logo" tabindex="0"/></a>
     </header>
     <main id="main-photographer-page">
       <div class="photograph-header">
-        <button class="contact_button show" onclick="displayModal()">Contactez-moi</button>
+        <button class="contact_button show" onclick="displayModal()" tabindex="0">Contactez-moi</button>
       </div>
       <div class="sort">
         <p>Trier par</p>
-        <div class="dropdown">
+        <div class="dropdown" tabindex="0">
           <button class="dropbtn"><span class="dropbtn-text">Date</span><span class="arrow">></span></button>
           <div class="dropdown-content">
-            <a href="#" id="popularity">Popularité</a>
-            <a href="#" id="title">Titre</a>
-            <a href="#" id="date" class="hidden-sortbutton">Date</a>
+            <a href="#" id="popularity" tabindex="0">Popularité</a>
+            <a href="#" id="title" tabindex="0">Titre</a>
+            <a href="#" id="date" class="hidden-sortbutton" tabindex="0">Date</a>
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@
       <div class="medias-section">
       </div>
     </main>
-    <div id="contact_modal">
+    <div id="contact_modal" role="dialog" aria-hidden="true">
 			<div class="modal">
 				<header>
           <h2>Contactez-moi <br><span id="photographer-name"></span></h2>
@@ -39,22 +39,26 @@
 				<form>
 					<div>
 						<label for="surname">Prénom</label>
-						<input type="text" name="Prenom" id="surname">
+						<input type="text" name="Prenom" id="surname" placeholder="Jean">
+            <span></span>
 						<label for="name">Nom</label>
-						<input type="text" name="Nom" id="name">
+						<input type="text" name="Nom" id="name" placeholder="Dupont">
+            <span></span>
             <label for="email">Email</label>
-            <input type="text" name="Email" id="email">
+            <input type="text" name="Email" id="email" placeholder="jean.dupont@gmail.com">
+            <span></span>
             <label for="message">Votre message</label>
-            <input type="text" name="Message" id="message">
+            <textarea type="text" name="Message" id="message" placeholder="Bonjour, ..."></textarea>
+            <span></span>
 					</div>
           <button class="contact_button submit">Envoyer</button>
 				</form>
 			</div>
 		</div>
-    <div id="lightbox-medias">
-      <a class="control close" onclick="closeLightBox()" >&times;</a>
-      <a class="control prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="control next" onclick="plusSlides(1)">&#10095;</a>
+    <div id="lightbox-medias" role="dialog" aria-hidden="true">
+      <a class="control close" aria-label="Close dialog">&times;</a>
+      <a class="control prev" aria-label="Previous image">&#10094;</a>
+      <a class="control next" aria-label="Next image">&#10095;</a>
       <div id="lightbox-content">
       </div>
     </div>

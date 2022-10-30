@@ -1,3 +1,7 @@
+.no-scroll {
+    overflow: hidden;
+}
+
 #contact_modal, #lightbox-medias {
     display: none;
     position: fixed;
@@ -7,6 +11,10 @@
     width: 100%;
     height: 100%;
     background-color: #ffffffd9;
+}
+
+#contact_modal {
+    overflow: auto;
 }
 
 .photograph-header {
@@ -62,10 +70,11 @@
 
 .modal header img {
     cursor: pointer;
+    width: 30px;
 }
 
 .modal header h2 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: normal;
 }
 
@@ -89,11 +98,30 @@ form div {
     margin-bottom: 26px;
 }
 
-form input {
+form input, form textarea{
     width: 100%;
-    height: 50px;
+    height: 40px;
     border: none;
     border-radius: 5px;
+    font-size: 30px;
+}
+
+form .field-error {
+    border: solid 3px rgb(180, 0, 0);
+}
+
+::placeholder {
+    font-size: 25px;
+    color: #afafafa8;
+}
+
+form span {
+    color: rgb(180, 0, 0);
+}
+
+form textarea#message {
+    max-width: 100%;
+    height: 90px;
 }
 
 #main-photographer-page {
@@ -152,6 +180,13 @@ form input {
     object-fit: cover;
     border-radius: 5px;
     cursor: pointer;
+    transition: transform 0.3s;
+}
+.medias-section article img:hover,
+.medias-section article video:hover,
+.medias-section article img:focus,
+.medias-section article video:focus {
+    transform: scale(1.07) translateY(-10px);
 }
 
 .medias-section .desc {
@@ -244,15 +279,21 @@ form input {
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #D3573C}
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+    background-color: #D3573C;
+}
   
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
     display: block;
   }
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
-  .dropdown:hover .dropbtn {
+  .dropdown:hover .dropbtn, 
+  .dropdown:focus .dropbtn 
+  {
     background-color: #901C1C;
     border-radius: 5px 5px 0 0;
   }
@@ -265,7 +306,8 @@ form input {
     font-size: 20px;
     transition: transform 0.3s;
   }
-  .dropdown:hover .dropbtn  .arrow{
+  .dropdown:hover .dropbtn .arrow,
+  .dropdown:focus .dropbtn .arrow {
     transform: rotateZ(270deg) rotateY(60deg);
     transition: transform 0.3s;
   }
@@ -325,4 +367,16 @@ form input {
     font-size: 20px;
     margin: 0;
     font-weight: 900;
+}
+.likes-price {
+    display: flex;
+    position: fixed;
+    width: 250px;
+    right: 20px;
+    bottom: 0;
+    background-color: #DB8876;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    font-weight: 700;
+    border-radius: 5px 5px 0 0;
 }
