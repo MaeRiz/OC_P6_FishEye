@@ -38,8 +38,9 @@
 }
 
 .contact_button:hover, .contact_button:focus {
-    background-color: #DB8876;
+    background-color: #dc7c66;
     color: black;
+    border: solid 1px #901C1C;
 }
 
 .contact_button.show {
