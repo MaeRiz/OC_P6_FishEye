@@ -67,7 +67,7 @@ function photographerFactory(data) {
         const div_likeAndPrice = document.createElement('div');
         div_likeAndPrice.classList.add("likes-price");
         div_likeAndPrice.appendChild(p_price);
-;
+
         return {article, div_likeAndPrice}
     }
 

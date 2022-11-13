@@ -67,14 +67,14 @@ function mediaFactory(data_media, data_photographer) {
             img.setAttribute("src", picture);
             img.setAttribute("alt", title);
             slide.appendChild(img);
-        };
+        }
 
         const mediaTitle = document.createElement('p');
         mediaTitle.textContent = title;
         slide.appendChild(mediaTitle);
 
         return (slide);
-    };
+    }
 
     return { title, image, likes, date, getMediaCardDOM, getMediaForSlide };
-};
+}

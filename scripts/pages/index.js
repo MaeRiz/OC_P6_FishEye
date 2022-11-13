@@ -21,7 +21,7 @@ async function displayData(photographers) {
         link.appendChild(userCardDOM);
         photographersSection.appendChild(link);
     });
-};
+}
 
     // Keyboard controls for open photographer page in focus with enter or space
 document.addEventListener('keydown', event => {
@@ -35,6 +35,6 @@ async function init() {
     // Récupère les datas des photographes
     const { photographers } = await getPhotographers();
     displayData(photographers);
-};
+}
 
 init();

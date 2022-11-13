@@ -7,10 +7,9 @@ async function getPhotographer(photographer_id) {
 
         if (data.photographers[i].id == photographer_id) {
             return (data.photographers[i]);
-        };
-    };
-
-};
+        }
+    }
+}
 
 async function getMedias(photographer_id) {
     const response = await fetch('../../data/photographers.json');
@@ -22,12 +21,11 @@ async function getMedias(photographer_id) {
 
         if (data.media[i].photographerId == photographer_id) {
             mediasList.push(data.media[i]);
-        };
-    };
-    return (mediasList);
-
+        }
+    }
+    return (mediasList)
 }
-;
+
 async function displayData(photographer, medias) {
     const photographersSection = document.querySelector(".photograph-header");
     const photographModalName = document.querySelector("#photographer-name");
@@ -59,7 +57,7 @@ async function displayData(photographer, medias) {
     p_likeCount.textContent = likeCount + " ❤";
     photographerPageCard.div_likeAndPrice.appendChild(p_likeCount);
     bodyPageDOM.appendChild(photographerPageCard.div_likeAndPrice);
-};
+}
 
 function likeMedia(element, id) {
     const totalLikes = document.querySelector('.total-like');
@@ -71,10 +69,9 @@ function likeMedia(element, id) {
         element.classList.remove("liked");
         element.innerHTML = (parseInt(element.innerText.match(/\d+/)[0]) -1) + " ❤";
         totalLikes.innerHTML = (parseInt(totalLikes.innerText.match(/\d+/)[0]) -1) + " ❤";
-    };
-
+    }
     // Here we can add function for update likes in db
-};
+}
 
 // Sort array by Popularity Date Likes
 function sortMedias(medias_list, type) {
@@ -178,7 +175,6 @@ async function init() {
         dropButton.innerHTML = "Popularité";
         event.preventDefault();
     });
-
-};
+}
 
 init();

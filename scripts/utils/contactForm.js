@@ -62,7 +62,7 @@ document.addEventListener('keydown', event => {
         if (event.key === "Escape") {
             closeModal();
         }
-    };
+    }
  });
 
 formDOM.surname.addEventListener('change', function() {
@@ -116,5 +116,5 @@ formDOM.addEventListener("submit", function(event) {
             formDOM.message.value, '\n'
         );
 
-    };
+    }
 });

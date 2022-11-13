@@ -43,15 +43,15 @@ function showSlides(n) {
 }
 
 // EventListener click for controls
-document.querySelector(".close").addEventListener("click", function(event) {
+document.querySelector(".close").addEventListener("click", function() {
     closeLightBox();
 });
 
-document.querySelector(".prev").addEventListener("click", function(event) {
+document.querySelector(".prev").addEventListener("click", function() {
     plusSlides(-1);
 });
 
-document.querySelector(".next").addEventListener("click", function(event) {
+document.querySelector(".next").addEventListener("click", function() {
     plusSlides(1);
 });
 
@@ -68,5 +68,5 @@ document.addEventListener('keydown', event => {
         } else if (event.key === "ArrowRight") {
             plusSlides(1);
         }
-    };
+    }
  });
